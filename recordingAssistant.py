@@ -11,7 +11,7 @@ cwd = os.getcwd()
 import pipeclient
 client = pipeclient.PipeClient()
 
-with open('tekstoj.csv', encoding='utf-8') as inf:
+with open('example.csv', encoding='utf-8') as inf:
     reader = csv.reader(inf.readlines())
 
 with open('tekstoj2.csv', 'w', newline = '', encoding='utf-8') as outf:
@@ -35,7 +35,7 @@ with open('tekstoj2.csv', 'w', newline = '', encoding='utf-8') as outf:
                 print('Started recording.')
             if input() == '':
                 client.write('Stop:')
-                print('Stopped recording. Press Enter to save and continue, 1 to delete, 2 to save and retry, 3 to skip or 4 to exit.')
+                print('Stopped recording. Press Enter to save and continue, 1 to delete and retry, 2 to save and retry, 3 to play original file, 4 to skip, or 5 to exit.')
             if tryNumber == 1:
                 file = os.path.join(cwd, row[0] + '.ogg')
             else:

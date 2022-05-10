@@ -200,7 +200,7 @@ class PipeClient():
 
     def _reader(self):
         """Read FIFO in worker thread."""
-        # Thread will wait at this read until it connects.
+        # Thread will wait at this read until it connects. 
         # Connection should occur as soon as _write_pipe has connected.
         read_pipe = open(READ_NAME, 'r')
         message = ''
