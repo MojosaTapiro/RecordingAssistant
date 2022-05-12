@@ -1,6 +1,7 @@
-Filenames	Comments	Lines to be recorded	"(Space for comments or, in cases of translation, the original text)"	Done? (Program marks with 'x' after recording is sucessful)
-<Filename>		<Line>		x
-<Filename>		<Line>		x
-<Filename>		<Line>		
-<Filename>		<Line>		
-<Filename>		<Line>		
+Gamefile name:,<Gamefile name>,,,
+Filenames,(Comments),Text to be recorded,(Original language text or comment),Done? (mark with x)
+<Filename>,,<text>,,x
+<Filename>,,<text>,,x
+<Filename>,,<text>,,
+<Filename>,,<text>,,
+<Filename>,,<text>,,
