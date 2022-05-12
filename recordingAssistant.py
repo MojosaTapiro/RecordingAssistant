@@ -68,7 +68,7 @@ def stop(event=''):
 def next(event=''):
     global rowNumber
     rowNumber += 1
-    while text[rowNumber][4] == 'x':
+    while text[rowNumber][4] == 'x' or rowNumber == 0 or rowNumber == 1:
         rowNumber += 1
     tries[rowNumber] = 1
     global labelLine
@@ -87,6 +87,8 @@ def next(event=''):
 def back(event=''):
     global rowNumber
     rowNumber -= 1
+    while rowNumber == 0 or rowNumber == 1:
+        rowNumber -= 1
     tries[rowNumber] = 1
     global labelLine
     labelLine.destroy()
@@ -113,6 +115,8 @@ def delete(event=''):
 def playOriginal(event=''):
     if sys.platform == 'win32':
         subprocess.Popen(['start', os.path.join(cwd, 'AwShirt', 'TalkshowExport', 'project', 'media', text[rowNumber][0] + '.ogg')], shell=True)
+    elif sys.platform == 'linux' or sys.platform == 'linux2':
+        subprocess.Popen(['paplay', os.path.join(cwd, 'AwShirt', 'TalkshowExport', 'project', 'media', text[rowNumber][0] + '.ogg')])
     else:
         subprocess.Popen(['open', os.path.join(cwd, 'AwShirt', 'TalkshowExport', 'project', 'media', text[rowNumber][0] + '.ogg')])
     global labelInfo
