@@ -114,7 +114,7 @@ def delete(event=''):
 
 def playOriginal(event=''):
     if sys.platform == 'win32':
-        subprocess.Popen(['start', os.path.join(cwd, 'AwShirt', 'TalkshowExport', 'project', 'media', text[rowNumber][0] + '.ogg')], shell=True)
+        subprocess.Popen(['start', os.path.join(cwd, gameFile, 'TalkshowExport', 'project', 'media', text[rowNumber][0] + '.ogg')], shell=True)
     elif sys.platform == 'linux' or sys.platform == 'linux2':
         subprocess.Popen(['paplay', os.path.join(cwd, 'AwShirt', 'TalkshowExport', 'project', 'media', text[rowNumber][0] + '.ogg')])
     else:
